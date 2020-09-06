@@ -1,0 +1,11 @@
+" set runtimepath+=~/.vim_runtime
+
+source ~/.me/vim/vimrc/basic.vim
+source ~/.me/vim/vimrc/extented.vim
+source ~/.me/vim/vimrc/plugins.vim
+source ~/.me/vim/vimrc/plugins.config.vim
+
+try
+"source ~/.vim_runtime/my_configs.vim
+catch
+endtry

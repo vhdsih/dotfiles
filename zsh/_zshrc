@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export EDITOR=/usr/bin/vim
-export ZSH="/root/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -183,6 +183,10 @@ function clean_all_del() {
     fi
 }
 
-alias vi=vim
-alias python=/usr/bin/python3
 
+alias remote-personal='zssh zhangdongchang@jumpbox.qiyi.domain'
+alias remote-cdn='zssh -p 32780 zhangdongchang@bastion.qiyi.domain'
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi

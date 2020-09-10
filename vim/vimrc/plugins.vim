@@ -15,12 +15,14 @@ Plug 'kana/vim-textobj-syntax'
 Plug 'kana/vim-textobj-function', { 'for':['c', 'cpp', 'vim', 'java'] }
 Plug 'sgur/vim-textobj-parameter'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer',  'for': ['c', 'cpp'] }
-Plug 'dense-analysis/ale'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 
 " Plug 'vim-airline/vim-airline'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Shougo/echodoc.vim'
 
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'

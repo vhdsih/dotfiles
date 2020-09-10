@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/root/workspace/cachedb/src/lib_global/src'
+let g:netrw_dirhist_5='/root/workspace/cachedb/src/lib_global'
+let g:netrw_dirhist_4='/root/workspace/cachedb/src/lib_global/src'
+let g:netrw_dirhist_3='/root/workspace/cachedb/src/lib_global'
+let g:netrw_dirhist_2='/opt/soft/disk-manager/src/libdb/src'
 let g:netrw_dirhist_1='/root/Documents'

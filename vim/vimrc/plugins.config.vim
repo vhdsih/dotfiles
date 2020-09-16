@@ -1,3 +1,5 @@
+let g:echodoc#enable_at_startup = 1
+
 " vim-easy-line
 "
 " NERDTREE
@@ -28,11 +30,13 @@ nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 " multiple-cursors
 "
 " lightline
-"
+let g:lightline = {}
+
 " asyncrun
 
 " YouCompleteMe
 "
+let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf='~/.me/vim/ycm_extra_conf.py'
 set completeopt=longest,menu
 let g:ycm_complete_in_strings = 1
@@ -60,3 +64,5 @@ let g:ale_sign_column_always = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
+"
+"

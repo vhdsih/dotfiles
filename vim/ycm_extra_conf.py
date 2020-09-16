@@ -78,6 +78,8 @@ cfamily_flags = [
         'c++',
         '-I', '.',
         'isystem',
+        '/usr/include',
+        'isystem',
         '/usr/bin/../lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5',
         'isystem',
         '/usr/bin/../lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux',
@@ -87,8 +89,6 @@ cfamily_flags = [
         '/usr/local/include',
         'isystem',
         '/usr/bin/../lib/clang/3.4.2/include',
-        'isystem',
-        '/usr/include'
         ]
 
 def Settings(**kwargs):

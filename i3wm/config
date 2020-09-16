@@ -8,6 +8,9 @@ set $mod Mod4
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
+#
+#feh -f ~/.me/bg.jpg
+exec --no-startup-id feh --bg-scale '$HOME/.me/bg.jpg'
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1
@@ -199,6 +202,8 @@ assign [class="Evolution"] $ws7
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Calamares"] floating enable border normal
+for_window [class="reliao"] floating enable border normal
+for_window [class="MEGA"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
@@ -291,12 +296,14 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id fcitx
-exec --no-startup-id fluxgui
+# exec --no-startup-id fluxgui
 exec --no-startup-id albert
 exec --no-startup-id megasync
 exec --no-startup-id dropbox
 exec --no-startup-id reliao
 exec --no-startup-id evolution
+exec --no-startup-id redshift -c ~/.config/redshift.conf 
+exec --no-startup-id dunst
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia

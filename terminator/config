@@ -1,5 +1,8 @@
 [global_config]
   dbus = False
+  tab_position = bottom
+  scroll_tabbar = True
+  homogeneous_tabbar = False
   hide_from_taskbar = True
   inactive_color_offset = 1.0
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler

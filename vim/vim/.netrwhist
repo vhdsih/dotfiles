@@ -1,2 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/vhdsih/Workspace/rocksdb/src'

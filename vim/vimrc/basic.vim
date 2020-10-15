@@ -133,13 +133,15 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
+"set background=dark
+set background=light
+set colorcolumn=80
 try
     colorscheme gruvbox
+    "colorscheme khaki
 catch
 endtry
 
-set background=dark
-set colorcolumn=80
 
 " Set extra options when running in GUI mode
 if has("gui_running")

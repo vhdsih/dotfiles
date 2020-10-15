@@ -29,6 +29,8 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'morhetz/gruvbox'
+
 
 " " Using a non-default branch
 "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }

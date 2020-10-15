@@ -30,7 +30,9 @@ nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 " multiple-cursors
 "
 " lightline
-let g:lightline = {}
+"
+let g:lightline = {
+            \ 'colorscheme': 'gruvbox' }
 
 " asyncrun
 
@@ -66,3 +68,7 @@ let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
 "
 "
+let g:gruvbox_improved_warnings=1
+let g:gruvbox_invert_indent_guides=1
+let g:gruvbox_invert_signs = 1
+let g:gruvbox_italicize_strings = 1

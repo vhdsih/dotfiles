@@ -1,5 +1,8 @@
 [global_config]
   dbus = False
+  tab_position = bottom
+  scroll_tabbar = True
+  homogeneous_tabbar = False
   hide_from_taskbar = True
   inactive_color_offset = 1.0
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
@@ -9,7 +12,7 @@
 [profiles]
   [[default]]
     background_color = "#282828"
-    background_darkness = 0.9
+    background_darkness = 0.8
     background_type = transparent
     cursor_color = "#16afca"
     font = Fantasque Sans Mono 14

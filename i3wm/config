@@ -10,7 +10,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 #
 #feh -f ~/.me/bg.jpg
-exec --no-startup-id feh --bg-scale '$HOME/.me/bg.jpg'
+exec --no-startup-id feh --bg-scale "/home/vhdsih/.me/bg-4k.png"
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1
@@ -40,9 +40,9 @@ bindsym $mod+Shift+q kill
 # start program launcher
 #bindsym $mod+d exec --no-startup-id dmenu_run -fn Monaco-16  -nb '#565656' -nf '#f8f8f8' -h 38
 #
-bindsym $mod+d exec --no-startup-id rofi -show run -modi run -location 1 -width 100 \
-         -lines 2 -line-margin 1 -line-padding 1 \
-         -separator-style none -font "Monaco 12" -columns 6 -bw 0 \
+bindsym $mod+d exec --no-startup-id rofi -show run -modi run -location 1 -width 20 \
+         -lines 10 -line-margin 2 -line-padding 2 \
+         -separator-style none -font "Fantasque Sans Mono 13" -columns 1 -bw 0 \
          -theme gruvbox-dark-soft
 
 # launch categorized menu
@@ -194,6 +194,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Reliao"] $ws8
+assign [class="MEGA"] $ws8
 assign [class="Evolution"] $ws7
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
@@ -202,7 +203,7 @@ assign [class="Evolution"] $ws7
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Calamares"] floating enable border normal
-for_window [class="reliao"] floating enable border normal
+for_window [class="Reliao"] floating enable
 for_window [class="MEGA"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable

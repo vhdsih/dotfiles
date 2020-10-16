@@ -10,7 +10,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 #
 #feh -f ~/.me/bg.jpg
-exec --no-startup-id feh --bg-scale "/home/vhdsih/.me/bg-4k.png"
+exec --no-startup-id feh --bg-scale "/home/vhdsih/.me/img/bg-4k.png"
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1

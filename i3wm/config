@@ -1,4 +1,4 @@
-# -- Vhdsih -- 
+# -- Vhdsih --
 # update on 2019/06
 # base on i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -10,7 +10,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 #
 #feh -f ~/.me/bg.jpg
-exec --no-startup-id feh --bg-scale "/home/vhdsih/.me/img/bg-4k.png"
+exec --no-startup-id feh --bg-scale "/home/vhdsih/.me/img/wallhaven-1.jpg"
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1
@@ -33,6 +33,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec terminator
+#bindsym $mod+Return exec tilix
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -40,10 +41,7 @@ bindsym $mod+Shift+q kill
 # start program launcher
 #bindsym $mod+d exec --no-startup-id dmenu_run -fn Monaco-16  -nb '#565656' -nf '#f8f8f8' -h 38
 #
-bindsym $mod+d exec --no-startup-id rofi -show run -modi run -location 1 -width 20 \
-         -lines 10 -line-margin 2 -line-padding 2 \
-         -separator-style none -font "Fantasque Sans Mono 13" -columns 1 -bw 0 \
-         -theme gruvbox-dark-soft
+bindsym $mod+d exec --no-startup-id  $HOME/.me/i3wm/rofi.sh
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -228,7 +226,7 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
+# for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="netea-cloud-music"] floating enable
 
@@ -303,7 +301,7 @@ exec --no-startup-id megasync
 exec --no-startup-id dropbox
 exec --no-startup-id reliao
 exec --no-startup-id evolution
-exec --no-startup-id redshift -c ~/.config/redshift.conf 
+exec --no-startup-id redshift -c ~/.config/redshift.conf
 exec --no-startup-id dunst
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -321,7 +319,7 @@ exec --no-startup-id alttab -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background  $i3_background
 # to:
@@ -346,7 +344,7 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-# Color palette used for i3 
+# Color palette used for i3
 # Variables are set based on the documentation:
 # https://i3wm.org/dovs/userguide.html#variables
 # Changing the value of one of the variables will
@@ -372,49 +370,39 @@ set $i3_color15         #000000
 set $i3_color16         #ffffff
 set $i3_color17         #0c0c0c
 
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-# bar {
-#     i3bar_command i3bar
-#     status_command i3status
-#     position bottom
-#
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-#
-#     bindsym button4 nop
-#     bindsym button5 nop
-#     font xft:Ubuntu 10
-#     strip_workspace_numbers yes
-#
-#     colors {
-#         background $i3_background
-#         statusline $i3_text
-#         separator  $i3_separator
-#
-#                           border     backgr.        text
-#         focused_workspace   $i3_color1 $i3_color4     $i3_text
-#         active_workspace    $i3_color2 $i3_color3     $i3_color5
-#         inactive_workspace  $i3_color2 $i3_color3     $i3_color6
-#         binding_mode        $i3_color8 $i3_background $i3_text
-#         urgent_workspace    $i3_color4 $i3_color5     $i3_color7
-#     }
-#}
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec --no-startup-id xfce4-panel --disable-wm-check
 exec --no-startup-id menutray -i
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-# Theme colors
-# class                 border      backgr.     text        indic.      child_border
-client.focused          $i3_color8  $i3_color8  $i3_color11 $i3_color12
-client.focused_inactive $i3_color9  $i3_color9  $i3_color4  $i3_color10
-client.unfocused        $i3_color9  $i3_color9  $i3_color4  $i3_color10
-client.urgent           $i3_color13 $i3_color12 $i3_color4  $i3_color14
-client.placeholder      $i3_color15 $i3_color17 $i3_color16 $i3_color15 $i3_color17
 
-client.background       $i3_background
+# green gruvbox
+# class                 border|backgr|text|indicator|child_border
+#client.focused          $green $green $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+client.focused          $darkgray $darkgray $yellow    $purple    $darkgray
+client.focused_inactive $blue     $blue     $darkgray  $purple    $darkgray
+client.unfocused        $blue     $blue     $darkgray  $purple    $darkgray
+client.urgent           $red $red $white $red $red
+
+client.background: #darkgray
 
 #############################
 ### settings for i3-gaps: ###
@@ -432,7 +420,7 @@ gaps outer -4
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 

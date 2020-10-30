@@ -35,6 +35,7 @@ DEEP_PURPLE="#5e35b1"
 DEEP_ORANGE="#f4511e"
 LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
+LIGHT_PINK="#d81b60"
 
 
 SDIR="$HOME/.config/polybar/scripts"
@@ -57,7 +58,7 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Style :' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "♥ amber|♥ blue|♥ blue-grey|♥ brown|♥ cyan|♥ deep-orange|♥ deep-purple|♥ green|♥ grey|♥ indigo|♥ blue-light|♥ green-light|♥ lime|♥ orange|♥ pink|♥ purple|♥ red|♥ teal|♥ yellow")"
+<<< "♥ amber|♥ blue|♥ blue-grey|♥ brown|♥ cyan|♥ deep-orange|♥ deep-purple|♥ green|♥ grey|♥ indigo|♥ blue-light|♥ pink-light|♥ green-light|♥ lime|♥ orange|♥ pink|♥ purple|♥ red|♥ teal|♥ yellow")"
             case "$MENU" in
 				## Colors
 				*amber) $SDIR/colors.sh -amber ;;
@@ -71,6 +72,7 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Style :' \
 				*grey) $SDIR/colors.sh -grey ;;
 				*indigo) $SDIR/colors.sh -indigo ;;
 				*blue-light) $SDIR/colors.sh -light-blue ;;
+				*pink-light) $SDIR/colors.sh -light-pink ;;
 				*green-light) $SDIR/colors.sh -light-green ;;
 				*lime) $SDIR/colors.sh -lime ;;
 				*orange) $SDIR/colors.sh -orange ;;

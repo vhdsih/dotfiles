@@ -5,7 +5,7 @@
 
 PDIR="$HOME/.config/polybar"
 LAUNCH="polybar-msg cmd restart"
- 
+
 if  [[ $1 = "-amber" ]]; then
 # Replacing colors
 sed -i -e 's/shade1 = .*/shade1 = #FFA000/g' $PDIR/config.ini
@@ -143,7 +143,20 @@ sed -i -e 's/shade4 = .*/shade4 = #29B6F6/g' $PDIR/config.ini
 sed -i -e 's/shade5 = .*/shade5 = #4FC3F7/g' $PDIR/config.ini
 sed -i -e 's/shade6 = .*/shade6 = #81D4FA/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #039BE5/g' $PDIR/config.ini
-sed -i -e 's/bg = .*/bg = #141C21/g' $PDIR/config.ini
+sed -i -e 's/bg = .*/bg = #F2F2F2/g' $PDIR/config.ini
+# Restarting polybar
+$LAUNCH &
+
+elif  [[ $1 = "-light-pink" ]]; then
+# Replacing colors
+sed -i -e 's/shade1 = .*/shade1 = #C2185B/g' $PDIR/config.ini
+sed -i -e 's/shade2 = .*/shade2 = #D81B60/g' $PDIR/config.ini
+sed -i -e 's/shade3 = .*/shade3 = #E91E63/g' $PDIR/config.ini
+sed -i -e 's/shade4 = .*/shade4 = #EC407A/g' $PDIR/config.ini
+sed -i -e 's/shade5 = .*/shade5 = #F06292/g' $PDIR/config.ini
+sed -i -e 's/shade6 = .*/shade6 = #F48FB1/g' $PDIR/config.ini
+sed -i -e 's/accent = .*/accent = #D81B60/g' $PDIR/config.ini
+sed -i -e 's/bg = .*/bg = #F2F2F2/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &
 
@@ -156,7 +169,7 @@ sed -i -e 's/shade4 = .*/shade4 = #9CCC65/g' $PDIR/config.ini
 sed -i -e 's/shade5 = .*/shade5 = #AED581/g' $PDIR/config.ini
 sed -i -e 's/shade6 = .*/shade6 = #C5E1A5/g' $PDIR/config.ini
 sed -i -e 's/accent = .*/accent = #7CB342/g' $PDIR/config.ini
-sed -i -e 's/bg = .*/bg = #141C21/g' $PDIR/config.ini
+sed -i -e 's/bg = .*/bg = #F2F2F2/g' $PDIR/config.ini
 # Restarting polybar
 $LAUNCH &
 
@@ -257,5 +270,5 @@ echo "Available options:
 -cyan		-deep-orange		-deep-purple		-green
 -grey		-indigo			-light-blue		-light-green
 -lime		-orange			-pink			-purple
--red		-teal			-yellow"
+-red		-teal			-yellow         -light-pink"
 fi

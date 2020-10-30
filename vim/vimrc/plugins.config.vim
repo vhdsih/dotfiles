@@ -55,8 +55,11 @@ let g:ycm_semantic_triggers =  {
           \ }
 
 " ALE
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = 'w'
+let g:ale_set_highlights = 1
+let g:ale_sign_error = "◉"
+let g:ale_sign_warning = "◉"
+highlight ALEErrorSign ctermfg=9 ctermbg=15 guifg=#C30500 guibg=#F5F5F5
+highlight ALEWarningSign ctermfg=11 ctermbg=15 guifg=#ED6237 guibg=#F5F5F5
 let g:ale_echo_delay = 20
 let g:ale_lint_delay = 500
 let g:ale_list_window_size = 5
@@ -64,7 +67,21 @@ let g:ale_linters_explicit = 1
 let g:ale_completion_delay = 500
 let g:ale_sign_column_always = 1
 let g:ale_lint_on_insert_leave = 1
-let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
-"
-"
+let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+let g:ale_echo_msg_format = '[%linter%] %code: %%s %s [%severity%]'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+ "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
+ nmap sp <Plug>(ale_previous_wrap)
+ nmap sn <Plug>(ale_next_wrap)
+ "<Leader>s触发/关闭语法检查
+ nmap <Leader>s :ALEToggle<CR>
+ "<Leader>d查看错误或警告的详细信息
+ nmap <Leader>d :ALEDetail<CR>
+ "使用clang对c和c++进行语法检查，对python使用pylint进行语法检查
+ let g:ale_linters = {
+ \   'c++': ['clang'],
+ \   'c': ['clang'],
+ \   'python': ['pylint'],
+ \}

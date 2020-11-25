@@ -44,6 +44,12 @@ then
     mv ~/.config/i3 ~/.config/i3.me.old
 fi
 
+# kitty
+if [ -d ~/.config/kitty ]
+then
+    mv ~/.config/kitty ~/.config/kitty.me.old
+fi
+
 
 rm -rf ~/.zshrc
 rm -rf ~/.vimrc
@@ -54,6 +60,7 @@ rm -rf ~/.i3
 rm -rf ~/.config/polybar
 rm -rf ~/.config/terminator
 rm -rf ~/.config/i3
+rm -rf ~/.config/kitty
 
 ln -sfn ~/.me/zsh/_zshrc ~/.zshrc
 ln -sfn ~/.me/vim/vim ~/.vim
@@ -63,6 +70,7 @@ ln -sfn ~/.me/tmux/tmux.conf ~/.tmux.conf
 ln -sfn ~/.me/terminator ~/.config/terminator
 ln -sfn ~/.me/polybar ~/.config/polybar
 ln -sfn ~/.me/i3wm ~/.config/i3
+ln -sfn ~/.me/kitty ~/.config/kitty
 
 cd ~/.me
 

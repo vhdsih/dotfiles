@@ -25,6 +25,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set viminfo='1000
+
 " Set linenu
 set nu
 " Set how many lines of history VIM has to remember

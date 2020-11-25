@@ -30,6 +30,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 
 " " Using a non-default branch

@@ -1,5 +1,4 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export EDITOR=/usr/bin/vim
@@ -190,6 +189,28 @@ function clean_all_del() {
     echo > $del_log_file
 }
 
+function load_anaconda3() {
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+	__conda_setup="$('/home/vhdsih/workspace/soft/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+	if [ $? -eq 0 ]; then
+	    eval "$__conda_setup"
+	else
+	    if [ -f "$HOME/workspace/soft/anaconda3/etc/profile.d/conda.sh" ]; then
+		. "$HOME/workspace/soft/anaconda3/etc/profile.d/conda.sh"
+	    else
+		export PATH="$HOME/workspace/soft/anaconda3/bin:$PATH"
+	    fi
+	fi
+	unset __conda_setup
+}
+# <<< conda initialize <<<
+
+
+export PATH=$PATH:/usr/local/cuda-11.0/bin
+export TERMINFO=/usr/share/terminfo
+load_anaconda3
+
 
 alias vi=vim
 alias final-rm='/bin/rm -rf'
@@ -200,3 +221,6 @@ alias remote-personal='zssh zhangdongchang@jumpbox.qiyi.domain'
 alias show_container='docker ps -a'
 alias enter_centos6='docker container start centos_v6 && docker container exec -it centos_v6 /bin/bash'
 alias enter_centos7='docker container start centos_v7 && docker container exec -it centos_v7 /bin/bash'
+alias select_gcc="sudo update-alternatives --config gcc"
+alias set_anaconda_active="conda config --set auto_activate_base true"
+alias set_anaconda_unactive="conda config --set auto_activate_base false"

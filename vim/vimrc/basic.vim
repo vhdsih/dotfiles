@@ -140,8 +140,9 @@ endif
 set background=light
 set colorcolumn=80
 try
-    colorscheme gruvbox
+    colorscheme one
     "colorscheme khaki
+    "colorscheme gruvbox
 catch
 endtry
 

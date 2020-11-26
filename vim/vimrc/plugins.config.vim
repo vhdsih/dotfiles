@@ -32,7 +32,7 @@ nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 " lightline
 "
 let g:lightline = {
-            \ 'colorscheme': 'gruvbox' }
+            \ 'colorscheme': 'one' }
 
 " asyncrun
 

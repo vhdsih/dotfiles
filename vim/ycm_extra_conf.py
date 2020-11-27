@@ -89,6 +89,12 @@ cfamily_flags = [
         '/usr/local/include',
         'isystem',
         '/usr/bin/../lib/clang/3.4.2/include',
+        'isystem',
+        '/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/7/',
+        'isystem',
+        '/usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/7/backward',
+        'isystem',
+        '/usr/bin/../lib/clang/10/include',
         ]
 
 def Settings(**kwargs):

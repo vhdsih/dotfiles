@@ -224,3 +224,5 @@ alias enter_centos7='docker container start centos_v7 && docker container exec -
 alias select_gcc="sudo update-alternatives --config gcc"
 alias set_anaconda_active="conda config --set auto_activate_base true"
 alias set_anaconda_unactive="conda config --set auto_activate_base false"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

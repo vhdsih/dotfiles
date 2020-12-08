@@ -219,8 +219,16 @@ alias remote-cdn='zssh -p 32780 zhangdongchang@bastion.qiyi.domain'
 alias remote-personal='zssh zhangdongchang@jumpbox.qiyi.domain'
 
 alias show_container='docker ps -a'
-alias enter_centos6='docker container start centos_v6 && docker container exec -it centos_v6 /bin/bash'
-alias enter_centos7='docker container start centos_v7 && docker container exec -it centos_v7 /bin/bash'
+
+alias enter_centos58='docker container start centos_v58 && docker container exec -it centos_v58 /bin/bash'
+alias enter_centos59='docker container start centos_v59 && docker container exec -it centos_v59 /bin/bash'
+alias enter_centos64='docker container start centos_v64 && docker container exec -it centos_v64 /bin/bash'
+alias enter_centos66='docker container start centos_v66 && docker container exec -it centos_v66 /bin/bash'
+alias enter_centos70='docker container start centos_v70 && docker container exec -it centos_v70 /bin/bash'
+alias enter_centos72='docker container start centos_v72 && docker container exec -it centos_v72 /bin/bash'
+alias enter_centos74='docker container start centos_v74 && docker container exec -it centos_v74 /bin/bash'
+alias enter_centos76='docker container start centos_v76 && docker container exec -it centos_v76 /bin/bash'
+
 alias select_gcc="sudo update-alternatives --config gcc"
 alias set_anaconda_active="conda config --set auto_activate_base true"
 alias set_anaconda_unactive="conda config --set auto_activate_base false"

@@ -226,3 +226,6 @@ alias set_anaconda_active="conda config --set auto_activate_base true"
 alias set_anaconda_unactive="conda config --set auto_activate_base false"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+ulimit -c unlimited

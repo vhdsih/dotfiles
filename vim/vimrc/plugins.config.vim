@@ -121,7 +121,7 @@ let g:lightline = {
     \    ]
     \ },
     \ 'component': {
-    \     'lineinfo': '∬ %3l:%-2v',
+    \     'lineinfo': '# %3l:%-2v',
     \     'readonly': '%{&readonly?"*root":""}',
     \     'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
     \ },

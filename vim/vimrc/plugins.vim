@@ -63,6 +63,10 @@ Plug 'rakr/vim-one'
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"
+"
+"
+Plug 'luochen1990/rainbow'
 
 " Initialize plugin system
 call plug#end()

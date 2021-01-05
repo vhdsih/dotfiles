@@ -320,3 +320,4 @@ nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 
 " ----------------------------------------------------------------
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"

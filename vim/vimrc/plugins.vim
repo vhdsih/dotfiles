@@ -67,6 +67,7 @@ Plug 'rhysd/git-messenger.vim'
 "
 "
 Plug 'luochen1990/rainbow'
+Plug 'preservim/nerdcommenter'
 
 " Initialize plugin system
 call plug#end()

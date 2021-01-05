@@ -106,7 +106,7 @@ function! Lessmess()
 endfunction
 
 let g:lightline = {
-    \ 'colorscheme': 'one',
+    \ 'colorscheme': 'gruvbox',
     \ 'active': {
     \    'left': [
     \        [ 'mode', 'paste' ],

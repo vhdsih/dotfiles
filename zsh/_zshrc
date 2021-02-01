@@ -228,6 +228,7 @@ alias enter_centos70='docker container start centos_v70 && docker container exec
 alias enter_centos72='docker container start centos_v72 && docker container exec -it centos_v72 /bin/bash'
 alias enter_centos74='docker container start centos_v74 && docker container exec -it centos_v74 /bin/bash'
 alias enter_centos76='docker container start centos_v76 && docker container exec -it centos_v76 /bin/bash'
+alias enter_ubuntu='docker container start ubuntu && docker container exec -it ubuntu /bin/bash'
 
 alias select_gcc="sudo update-alternatives --config gcc"
 alias set_anaconda_active="conda config --set auto_activate_base true"

@@ -1,25 +1,106 @@
-# If you come from bash you might have to change your $PATH.
-
-# Path to your oh-my-zsh installation.
 export EDITOR=vim
+
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="avit"
 
-ZSH_THEME="ys"
 plugins=(sudo autojump git tmux zsh-autosuggestions)
 
-#!!!!!!
 source $ZSH/oh-my-zsh.sh
-
 
 # plugin autojump
 [[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
 
-#autoload -U compinit && compinit -u
+autoload -U compinit && compinit -u
 
+# acl complie cmd
+function acl_compile() {
+    g++ -std=c++11 $* -lfiber_cpp -lacl_all -lfiber -ldl -lpthread -lz
+}
 
+# delete function
+is_deleted=0
+del_log_file="$HOME/.deleted/deleted.log"
 
+function rm() {
+    is_deleted=1
+    move_path=$HOME/.deleted/`date +'%Y-%m-%d~%H:%M:%S'`/
+    echo :: files will be moved into $move_path
+    mkdir -p $move_path
+
+    for file in $*;
+    do
+        if [[ $file == -* ]]; then
+            echo "-> ignore params " $file
+        elif [[ $file == / ]]; then
+            echo "-> dangerous option for rm -rf /, cmd ignored"
+        elif [[ `realpath $file` == / ]]; then
+            echo "-> realpath is /, dangerous option for rm -rf /, cmd ignored"
+        else
+            echo "-> mv $file $move_path"
+            touch $del_log_file
+            echo "mv $file to $move_path" >> $del_log_file
+
+            mv $file $move_path
+        fi
+    done
+}
+
+function show_last_rm() {
+    if [[ $is_deleted == 0 ]]
+    then
+        echo "you do not delete any file recently!"
+    else
+        echo "::path == $move_path"
+        ls $move_path
+    fi
+}
+
+function undo_last_rm() {
+    if [[ $is_deleted == 0 ]]
+    then
+        echo "you do not delete any file recently!"
+    else
+        echo ":: move files from $move_path into `pwd`"
+        mv $move_path/* .
+        # sed -i '$d' $del_log_file
+        echo "undo remove: move files from $move_path into `pwd`" >> $del_log_file
+    fi
+}
+
+function clean_all_del() {
+    echo ":: warning! delete all files in backup location[n/y]"
+    read cmd
+    if [[ $cmd == 'y' ]] then
+        /usr/bin/rm -rf $HOME/.deleted/*
+    else
+        echo "exit!"
+    fi
+    echo > $del_log_file
+}
+
+export TERMINFO=/usr/share/terminfo
+
+alias vi=vim
+alias final-rm='/bin/rm -rf'
+
+alias remote-cdn='zssh -p 32780 zhangdongchang@bastion.qiyi.domain'
+alias remote-personal='zssh zhangdongchang@jumpbox.qiyi.domain'
+
+alias show_container='docker ps -a'
+
+alias enter_centos58='docker container start centos_v58 && docker container exec -it centos_v58 /bin/bash'
+alias enter_centos59='docker container start centos_v59 && docker container exec -it centos_v59 /bin/bash'
+alias enter_centos64='docker container start centos_v64 && docker container exec -it centos_v64 /bin/bash'
+alias enter_centos66='docker container start centos_v66 && docker container exec -it centos_v66 /bin/bash'
+alias enter_centos70='docker container start centos_v70 && docker container exec -it centos_v70 /bin/bash'
+alias enter_centos72='docker container start centos_v72 && docker container exec -it centos_v72 /bin/bash'
+alias enter_centos74='docker container start centos_v74 && docker container exec -it centos_v74 /bin/bash'
+alias enter_centos76='docker container start centos_v76 && docker container exec -it centos_v76 /bin/bash'
+alias enter_ubuntu='docker container start ubuntu && docker container exec -it ubuntu /bin/bash'
+
+alias select_gcc="sudo update-alternatives --config gcc"
+alias set_anaconda_active="conda config --set auto_activate_base true"
+alias set_anaconda_unactive="conda config --set auto_activate_base false"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

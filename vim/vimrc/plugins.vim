@@ -18,7 +18,6 @@ Plug 'kana/vim-textobj-function', { 'for':['c', 'cpp', 'vim', 'java'] }
 Plug 'sgur/vim-textobj-parameter'
 
 " complete
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer',  'for': ['c', 'cpp'] }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'tenfyzhong/CompleteParameter.vim'
 
@@ -63,8 +62,6 @@ Plug 'rakr/vim-one'
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"
-"
 "
 Plug 'luochen1990/rainbow'
 Plug 'preservim/nerdcommenter'

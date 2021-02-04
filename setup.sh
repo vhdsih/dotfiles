@@ -82,3 +82,4 @@ cp -r fonts/* ~/.local/share/fonts
 fc-cache -v
 sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
 
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions

@@ -193,8 +193,8 @@ alias set_anaconda_unactive="conda config --set auto_activate_base false"
 
 ulimit -c unlimited
 
-# export http_proxy=http://127.0.0.1:7890
-# export https_proxy=http://127.0.0.1:7890
+#export http_proxy=http://127.0.0.1:7890
+#export https_proxy=http://127.0.0.1:7890
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
